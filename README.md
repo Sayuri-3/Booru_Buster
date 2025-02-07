@@ -37,12 +37,28 @@ The script will:
 ```
 booru-buster/
 │── booru_buster.py   # The main script
+│── tags_counter.py   # Add-on to count tags
 │── sync/             # Folder where downloaded images are stored
 │── README.md         # Documentation
 ```
 ## Customization 🎨
 You can change the sync folder name in the script (SYNC_FOLDER = "sync") if you want a different download directory.
 If you experience rate limits, consider adding longer delays in time.sleep(1).
+
+## Tag Analysis Add-on 🔍
+
+This script allows you to analyze the most frequently appearing tags in a Danbooru user's favorite images. Instead of downloading images, it scrapes the tags associated with each favorited post and provides a ranked list of the most common ones.
+
+### How to Use 🛠️
+1. Run the script:
+```sh
+   python tags_counter.py
+```
+2. Enter the Danbooru username when prompted.
+3. The script will:
+- Scrape all favorited posts of the user.
+- Extract and count the tags from each image.
+- Display a list of the most frequently seen tags (top 40).
 
 ## License 📜
 
